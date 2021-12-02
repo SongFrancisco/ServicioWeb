@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sevicio web</title>
+    <link rel="stylesheet" href="index.css">
+
+    <script>
+        fetch("http://www.raydelto.org/agenda.php").then((Respuesta) => {
+            return Respuesta.json();
+        }).then((Respuesta) => {
+            document.getElementById('Nombre').value = Respuesta.Nombre1;
+            document.getElementById('Apellido').value = Respuesta.Apellido1;
+            document.getElementById('Matricula').value = Respuesta.Matricula1;
+        })
+
+    </script>
+</head>
+<body>
+    <div class="Dis">
+
+    </div>
+    <div><center>
+        <h2>Servicio Web</h2>
+        <p></p>
+        <input type="text" id="Nombre1" value=" Nombre"/>
+        <p></p>
+        <input type="text" id="Apellido1" value="Apellido"/>
+        <p></p>
+        <input type="text" id="Matricula1" value="Matricula"/>
+        <p></p>
+        <input type="button" value="Registrar">
+    </div></center>
+    
+</body>
+</html>
